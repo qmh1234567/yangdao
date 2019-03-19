@@ -8,11 +8,11 @@
     </el-carousel-item>
   </el-carousel>
    <!-- 相关软文 -->
-   <div style="width:100%">
+   <!-- <div style="width:100%"> -->
    <el-card class="box-card" style="margin-top:30px; margin-right:50px">
-  <div slot="header" class="clearfix">
-    <span style="float:left;">相关软文</span>
-    <button type="text" class="more_button">more<i class="el-icon-caret-right"> </i></button>
+  <div slot="header" class="card_title clearfix">
+    <span style="color:white; flex:1;">相关软文</span>
+    <el-button type="text" class="more_button1">more<i class="el-icon-caret-right"> </i></el-button>
   </div>
    <!-- 列表内容 -->
   <el-row>
@@ -32,25 +32,25 @@
   </el-col>
 </el-row>
 </el-card>
- </div>
+ <!-- </div> -->
  <!-- 商家优惠活动 -->
  <div>
  <el-card class="box-card" style="margin-top:30px; margin-right:50px">
-  <div slot="header" class="clearfix">
-    <span style="float:left;">商家优惠活动</span>
-    <button type="text" class="more_button">more<i class="el-icon-caret-right"> </i></button>
+  <div slot="header" class="card_title clearfix">
+    <span style="color:white; flex:1;">商家优惠活动</span>
+    <el-button type="text" class="more_button1">more<i class="el-icon-caret-right"> </i></el-button>
   </div>
    <!-- 列表内容 -->
   <el-row>
-  <el-col  v-for="o in card2" :key="o">
+  <el-col  v-for="o1 in card2" :key="o1">
     <el-card :body-style="{ padding: '0px' }">
       <div class="all-card">
-      <div class="card-img"><img class="image card-image" v-bind:src="o.url"></div>
+      <div class="card-img"><img class="image card-image" v-bind:src="o1.url"></div>
       <div class="card-text">
-        <el-button type="text" class="button" >{{ o.title }}</el-button>
-        <el-col type="text" class="card-content "> {{o.content}} </el-col>
+        <el-button type="text" class="button" >{{ o1.title }}</el-button>
+        <el-col type="text" class="card-content "> {{o1.content}} </el-col>
         <div class="bottom clearfix" >
-          <time class="time" >{{ o.time }}</time>
+          <time class="time" >{{ o1.time }}</time>
         </div>       
       </div>
       </div>
@@ -62,21 +62,21 @@
 <!-- 专家免费在线 -->
 <div>
  <el-card class="box-card" style="margin-top:30px; margin-right:50px">
-  <div slot="header" class="clearfix">
-    <span style="float:left;">专家免费在线</span>
-    <button type="text" class="more_button">more<i class="el-icon-caret-right"> </i> </button>
+  <div slot="header" class="card_title clearfix">
+    <span style="color:white; flex:1;">专家免费在线</span>
+    <el-button type="text" class="more_button1">more<i class="el-icon-caret-right"> </i></el-button>
   </div>
   <!-- 列表内容 -->
   <el-row>
-  <el-col  v-for="o in card4" :key="o">
+  <el-col  v-for="o2 in card4" :key="o2">
     <el-card :body-style="{ padding: '0px' }">
       <div class="all-card">
-      <div class="card-img"><img class="image card-image" v-bind:src="o.url"></div>
+      <div class="card-img"><img class="image card-image" v-bind:src="o2.url"></div>
       <div class="card-text">
-        <el-col type="text" class="card-content1 "><i>{{o.patient1}}</i> {{o.question1}} </el-col>   
-        <el-col type="text" class="card-content1 "><i>{{o.patient2}}</i> {{o.question2}} </el-col>    
-        <el-col type="text" class="card-content1 "><i>{{o.patient3}}</i> {{o.question3}} </el-col> 
-        <el-col type="text" class="card-content1 "><i>{{o.patient4}}</i> {{o.question4}} </el-col>    
+        <el-col type="text" class="card-content1 "><i>{{o2.patient1}}</i> {{o2.question1}} </el-col>   
+        <el-col type="text" class="card-content1 "><i>{{o2.patient2}}</i> {{o2.question2}} </el-col>    
+        <el-col type="text" class="card-content1 "><i>{{o2.patient3}}</i> {{o2.question3}} </el-col> 
+        <el-col type="text" class="card-content1 "><i>{{o2.patient4}}</i> {{o2.question4}} </el-col>    
       </div>
       </div>
     </el-card>
@@ -87,13 +87,13 @@
 <!-- 限时私人订制 -->
 <div>
 <el-card class="box-card" style="margin-top:30px; margin-right:50px">
-  <div slot="header" class="clearfix">
-    <span style="float:left;">限时私人订制</span>
-    <button type="text" class="more_button">more<i class="el-icon-caret-right"> </i> </button>
+ <div slot="header" class="card_title clearfix">
+    <span style="color:white; flex:1;">限时私人订制</span>
+    <el-button type="text" class="more_button1">more<i class="el-icon-caret-right"> </i></el-button>
   </div>
   <!-- 列表内容 -->
   <el-row>
-  <el-col :span="8" v-for="(o, index) in f_imgs" :key="o" :offset="index > 0 ? f_imgs : 0" style="margin-left:10px">
+  <el-col :span="8" v-for="(o, index) in f_imgs" :key="index" :offset="index > 0 ? f_imgs : 0" style="margin-left:10px">
     <el-card :body-style="{ padding: '0px' }">
       <img v-bind:src="o.url" class="image food-image">
       <div style="margin-top: -10px;">
@@ -128,16 +128,42 @@
   }
 
   /* 卡片 */
-  .more_button{
+  .text_title{
+    float:left;
+    color:white;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  
+  /* .more_button1{
     float: right;
-    border: 0;
+    border: none;
     font-size: 18px;
-    background-color: white;
-    color: red;
+    padding-top: 5px;
+    color:white;
+    background-color: #CF3B1C;
+  } */
+   .more_button1{
+    text-align: right; 
+    padding: 2px 0;
+    color:white;
+    flex:1; 
+  }
+  
+  .card_title{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    
+    /* background-color: red; */
   }
   .el-card__header{
-    padding-bottom: 25px;
+    background-color: #CF3B1C;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
+  
   .all-card {
     display: flex;
     flex-direction: row;
@@ -165,10 +191,10 @@
     float:left;
     margin: 10px;
   }
-  .el-button--text{
+  /* .el-button--text{
     font-size: 18px;
     margin-top: 10px;
-  }
+  } */
   .time{
     color:#999; 
     font-size:13px;

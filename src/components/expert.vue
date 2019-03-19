@@ -1,12 +1,13 @@
 <template>
   <div >
      <!-- 第一排 -->
-   <el-col class="row_all">
-    <el-row :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
+   <el-col class="row_all1">
+    <el-row :span="8" v-for="(o,index) in card_row" :key="index" :offset="index>0?card_row:0" class="card_col">
+      <div style="width:100%">
+   <el-card class="box-card"  shadow="hover" :body-style="{ padding: '10px' }"  >
   <div slot="header" class="card_title clearfix">
     <span style="color:white; flex:1;">{{ o.title }}</span>
-    <el-button class="button_more" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
+    <el-button class="button_more1" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
   </div>
   <el-row class="expert_intrd">
     <!-- 第一个专家 -->
@@ -47,6 +48,7 @@
   </el-col>
   </el-row>
 </el-card>
+</div>
     </el-row>
    </el-col>
 <!-- 分页 -->
@@ -62,12 +64,12 @@
 </template>
 
 <style>
-  .row_all{
+  .row_all1{
     display:flex;
     flex-direction:column; 
     margin-bottom:40px;
   }
-  .button_more{
+  .button_more1{
     text-align: right; 
     padding: 2px 0;
     color:white;
@@ -98,13 +100,10 @@
     flex-direction: row;
     /* background-color: red; */
   }
-  .el-card__header{
+   .el-card__header{
     background-color: #CF3B1C;
     padding-bottom: 10px;
     padding-top: 10px;
-  }
-  .box-card {
-    width: 100%;
   }
   .card_content{
     display: flex;

@@ -2,11 +2,11 @@
 <div>
   <!-- 第一排 -->
    <el-row class="row_all">
-    <el-col :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
+    <el-col :span="8" v-for="(o,index) in card_row" :key="index" :offset="index>0?card_row:0" class="card_col">
+   <el-card class="box-card1"  shadow="hover" :body-style="{ padding: '10px' }"  >
   <div slot="header" class="card_title clearfix">
     <span style="color:white; flex:1;">{{ o.title }}</span>
-    <el-button class="button_more" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
+    <el-button class="button_more1" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
   </div>
   <div class="card_content">
     <div class="video_push">
@@ -29,11 +29,11 @@
    </el-row>
    <!-- 第二排 -->
    <el-row class="row_all">
-    <el-col :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
+    <el-col :span="8" v-for="(o,index) in card_row" :key="index" :offset="index>0?card_row:0" class="card_col">
+   <el-card class=" box-card1"  shadow="hover" :body-style="{ padding: '10px' }"  >
   <div slot="header" class="card_title clearfix">
     <span style="color:white; flex:1;">{{ o.title }}</span>
-    <el-button class="button_more" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
+    <el-button class="button_more1" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
   </div>
   <div class="card_content">
     <div class="video_push">
@@ -56,11 +56,11 @@
    </el-row>
    <!-- 第三排 -->
    <el-row class="row_all">
-    <el-col :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
+    <el-col :span="8" v-for="(o,index) in card_row" :key="index" :offset="index>0?card_row:0" class="card_col">
+   <el-card class="box-card1" shadow="hover" :body-style="{ padding: '10px' }"  >
   <div slot="header" class="card_title clearfix">
     <span style="color:white; flex:1;">{{ o.title }}</span>
-    <el-button class="button_more" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
+    <el-button class="button_more1" type="text"> <b>more</b><i class="el-icon-caret-right"></i></el-button>
   </div>
   <div class="card_content">
     <div class="video_push">
@@ -99,7 +99,7 @@
     flex-direction:row; 
     margin-bottom:40px;
   }
-  .button_more{
+  .button_more1{
     text-align: right; 
     padding: 2px 0;
     color:white;
@@ -137,7 +137,8 @@
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  .box-card {
+  .box-card1 {
+    /* background-color: #CF3B1C; */
     width: 480px;
   }
   .card_content{

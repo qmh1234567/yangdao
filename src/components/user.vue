@@ -1,10 +1,10 @@
 <template>
 <div>
   <!-- 个人资料 -->
-    <el-col class="row_all">
+    <el-col class="row_all2">
     <el-row :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
-  <div slot="header" class="card_title clearfix">
+   <el-card class="box-card2" shadow="hover" :body-style="{ padding: '10px' }"  >
+  <div slot="header" class="card_title1 clearfix">
     <span style="color:white; ">个人资料</span>
   </div>
   <el-row class="expert_intrd">
@@ -40,10 +40,10 @@
     </el-row>
    </el-col>
    <!-- 中医体质鉴定表 -->
-    <el-col class="row_all">
+    <el-col class="row_all2">
     <el-row :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
-  <div slot="header" class="card_title clearfix">
+   <el-card class="box-card2" shadow="hover" :body-style="{ padding: '10px' }"  >
+  <div slot="header" class="card_title1 clearfix">
     <span style="color:white; ">中医体质鉴定表</span>
   </div>
   <span style="float:left; color:grey; padding-left:10px;">气虚质&nbsp;&nbsp;&nbsp;(R型)</span>
@@ -83,10 +83,10 @@
     </el-row>
    </el-col>
   <!-- 保健方案推荐 -->
-  <el-col class="row_all">
+  <el-col class="row_all2">
     <el-row :span="8" v-for="(o,index) in card_row" :key="o" :offset="index>0?card_row:0" class="card_col">
-   <el-card class="box-card" shadow="hover" :body-style="{ padding: '10px' }"  >
-  <div slot="header" class="card_title clearfix">
+   <el-card class="box-card2" shadow="hover" :body-style="{ padding: '10px' }"  >
+  <div slot="header" class="card_title1 clearfix">
     <span style="color:white; ">保健方案推荐</span>
   </div>
    <!-- 方案内容 -->
@@ -101,17 +101,17 @@
 </template>
 
 <style>
- .row_all{
+ .row_all2{
     display:flex;
     flex-direction:column; 
     margin-bottom:40px;
   }
-  .button_more{
+  /* .button_more{
     text-align: right; 
     padding: 2px 0;
     color:white;
     flex:1; 
-  }
+  } */
 
   .text {
     font-size: 14px;
@@ -131,7 +131,7 @@
   .clearfix:after {
     clear: both
   }
-  .card_title{
+  .card_title1{
     text-align: left;
     /* background-color: red; */
   }
@@ -140,7 +140,7 @@
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  .box-card {
+  .box-card2 {
     width: 100%;
   }
   .card_content{

@@ -3,7 +3,7 @@
   <!-- 一问一答 -->
  <el-col>
    <el-col>
-  <el-row :span="8" v-for="(o, index) in talk1" :key="o" :offset="index > 0 ? talk1 : 0">
+  <el-row :span="8" v-for="(o, index) in talk1" :key="index" :offset="index > 0 ? talk1 : 0">
     <div class="question">
     <img v-bind:src="o.url" class="image profile">
    <el-card :body-style="{ padding: '0px' }" style="flex:4" >   
@@ -23,7 +23,7 @@
   <!-- 一问一答 -->
   <el-col>
    <el-col>
-  <el-row :span="8" v-for="(o, index) in talk1" :key="o" :offset="index > 0 ? talk1 : 0">
+  <el-row :span="8" v-for="(o, index) in talk1" :key="index" :offset="index > 0 ? talk1 : 0">
     <div class="question">
     <img v-bind:src="o.url" class="image profile">
    <el-card :body-style="{ padding: '0px' }" style="flex:4" >   
